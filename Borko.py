@@ -25,7 +25,7 @@ async def on_disconnect():
     general_channel = bot.get_channel(859920251541389322)
     await general_channel.send('Ajte bok.')
 
-
+"""
 @bot.event
 async def background_loop():
     await bot.wait_until_ready()
@@ -36,6 +36,7 @@ async def background_loop():
         await asyncio.sleep(2)
 
 bot.loop.create_task(background_loop())
+"""
 
 
 @bot.event
@@ -68,16 +69,17 @@ async def on_message(message):
         borkoEmbed.set_footer(text="DUIDUIDUIDUIDUIDUI")
         borkoEmbed.set_author(name="Chad Roach")
 
-    if (message.content == 'koliko je sati' or message.content == 'borko koliko je sati' or message.content == 'Borko koliko je sati' or message.content == 'Koliko je sati'):
-        borkohours = ['Isto ka i jučer u isto doba',
-                      'kOlIkO jE sAtI']
-        general_channel = bot.get_channel(859920251541389322)
-        await general_channel.send(random.choice(borkohours))
+        # if (message.content == 'koliko je sati' or message.content == 'borko koliko je sati' or message.content == 'Borko koliko je sati' or message.content == 'Koliko je sati'):
+        # borkohours = ['Isto ka i jučer u isto doba',
+        #              'kOlIkO jE sAtI']
+        #general_channel = bot.get_channel(859920251541389322)
+        # await general_channel.send(random.choice(borkohours))
 
-        await general_channel.send(embed=borkoEmbed)
+        # await general_channel.send(embed=borkoEmbed)
 
     if "koliko je sati" in message.content:
-        bhours = ['Šta koliko je sati?', 'Ne znan ja']
+        bhours = ['Šta koliko je sati?', 'Ne znan ja',
+                  'Isto ka i jučer u isto doba', 'kOlIkO jE sAtI']
         general_channel = bot.get_channel(859920251541389322)
         await general_channel.send(random.choice(bhours))
 
@@ -85,7 +87,6 @@ async def on_message(message):
         bhours = ['Ne mogu, iden na gradele',
                   'Ne mogu, brat mi u sobi ima koronu, a tamo je najbolji internet', 'Ne da mi se danas']
         general_channel = bot.get_channel(859920251541389322)
-        await general_channel.send(random.choice(bhours))
 
 # Run the client on the server
-bot.run('ODY1MjgwMTgzNDE0MTYxNDM3.YPBs9w.smRH12YjBjDsyUb6G6RU_WAJ7fk')
+bot.run('ODY1MjgwMTgzNDE0MTYxNDM3.YPBs9w.72hWeFIfnceMKavXSJiK2pA7SUU')
