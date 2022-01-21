@@ -89,4 +89,4 @@ async def on_message(message):
         general_channel = bot.get_channel(859920251541389322)
 
 # Run the client on the server
-bot.run('ODY1MjgwMTgzNDE0MTYxNDM3.YPBs9w.72hWeFIfnceMKavXSJiK2pA7SUU')
+bot.run('ODY1MjgwMTgzNDE0MTYxNDM3.YPBs9w.mYrZikpKv54IkKFClH6JgUBEtM0')
