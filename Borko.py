@@ -40,6 +40,11 @@ bot.loop.create_task(background_loop())
 
 @bot.event
 async def on_message(message):
+    if (message.content == 'lol'):
+        blol = ['Sva srića nisan djevac pa ne igran to', 'Koji ste vi djevci', 'Zamisli igrat lol']
+        general_channel = bot.get_channel(704393952157106339)
+        await general_channel.send(random.choice(blol))
+
     if (message.content == 'pog' or message.content == 'pogg' or message.content == 'poggg' or message.content == 'pogggg'):
         general_channel = bot.get_channel(704393952157106339)
         await general_channel.send('Šta je smišno mamlaze mali? Prikini pričat tako i ponašaj se normalno.')
